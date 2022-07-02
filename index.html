@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pomodoro Clock</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+   <div class="container">
+    <main class="app">
+      
+      <div class="progress-bar"></div>
+      <div class="timer">
+        <div class="button-group mode-buttons" id="js-mode-buttons">
+          <button
+            data-mode="pomodoro"
+            class="button active mode-button"
+            id="js-pomodoro"
+          >
+            pomodoro
+          </button>
+          <button
+            data-mode="shortBreak"
+            class="button mode-button"
+            id="js-short-break"
+          >
+            short break
+          </button>
+          <button
+            data-mode="longBreak"
+            class="button mode-button"
+            id="js-long-break"
+          >
+            long break
+          </button>
+        </div>
+        
+        <div class="clock" id="js-clock">
+          <span id="js-minutes">25</span>
+          <span class="separator">:</span>
+          <span id="js-seconds">00</span>
+        </div>
+        <progress class="progress" id="js-progress" value="0"></progress>
+        <button class="main-button" data-action="start" id="js-btn">
+          Start
+        </button>
+        
+      </div>
+    </main>
+    <div class="hidden">
+      <audio src="backtowork.mp3" data-sound="pomodoro"></audio>
+      <audio src="break.mp3" data-sound="shortBreak"></audio>
+      <audio src="lofi-study.mp3"></audio>
+      <audio src="break-music.mp3"></audio>
+    </div>
+   </div>
+
+   
+
+    <div className = "container-summary">
+      <h1 class="summary-header">Summary</h1>
+      <div class="stat-total">
+        <div class="stat-summary">
+          <p class="stat-title">Work Sessions: </p>
+          <span id="js-sessions">0</span>
+        </div>
+        <div class="stat-summary">
+          <p class="stat-title">Total Time: </p>
+          <span id="js-totalTime">0</span>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
